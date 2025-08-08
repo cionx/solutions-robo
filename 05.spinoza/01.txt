@@ -1,0 +1,4 @@
+obtain ⟨hA, hB⟩ := k
+apply h
+assumption
+assumption
