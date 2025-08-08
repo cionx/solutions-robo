@@ -1,0 +1,3 @@
+obtain ⟨hA1, hB⟩ | hA2 := h
+assumption
+assumption
