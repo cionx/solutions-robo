@@ -1,0 +1,2 @@
+intro ⟨mp, mpr⟩
+assumption
