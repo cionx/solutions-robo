@@ -1,0 +1,2 @@
+apply exists_prime_and_dvd
+decide
