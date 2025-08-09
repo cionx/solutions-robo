@@ -1,0 +1,14 @@
+use (a + c)/2
+obtain hac | hac | hac := lt_trichotomy a c
+-- a < c
+left
+constructor
+linarith
+linarith
+-- a = c
+contradiction
+-- c < a
+right
+constructor
+linarith
+linarith
