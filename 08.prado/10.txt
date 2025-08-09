@@ -1,0 +1,21 @@
+have even_iff_2_div (a : ℕ) : Even a ↔ 2 ∣ a
+constructor
+intro ⟨k, hk⟩
+use k
+omega
+intro ⟨k, hk⟩
+use k
+omega
+
+use 2
+simp
+constructor
+decide
+intro p hp he
+rw [even_iff_2_div p] at he
+rw [prime_def] at hp
+obtain ⟨h2, hp⟩ := hp
+specialize hp 2 he
+obtain h | h := hp
+contradiction
+omega
