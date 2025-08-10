@@ -1,0 +1,5 @@
+trans ∑ i ∈ I, 0
+apply sum_congr
+rfl
+apply h
+simp
