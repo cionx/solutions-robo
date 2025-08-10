@@ -1,0 +1,10 @@
+induction n with d hd
+-- base case
+simp
+-- induction step
+rw [← insert_Icc_eq_Icc_add_one_right]
+rw [sum_insert]
+rw [hd]
+ring
+simp
+simp
