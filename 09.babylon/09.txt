@@ -1,0 +1,14 @@
+induction m with d hd
+simp
+rw [← insert_Icc_eq_Icc_add_one_right]
+rw [sum_insert]
+rw [sum_insert]
+rw [hd]
+simp
+rw [add_pow_two]
+simp
+rw [arithmetic_sum]
+ring
+simp
+simp
+simp
