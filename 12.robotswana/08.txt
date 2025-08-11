@@ -1,0 +1,18 @@
+trans (f (∑ i : Fin n, ∑ j : Fin n, A i j • E i j))
+apply congr_arg f (matrix_eq_sum_ebasis A)
+simp
+
+rw [sum_congr rfl]
+simp
+intro i
+trans ∑ j : Fin n, A i j * (if i = j then f (E i i) else 0)
+rw [sum_congr rfl]
+simp
+intro j
+by_cases h : i = j
+· rw [h]
+  simp
+· rw [zero_on_offDiag_ebasis h₁ i j h]
+  rw [if_neg h]
+  simp
+simp
