@@ -1,0 +1,29 @@
+-- The following proposition is copy-pasted from the previous level,
+-- but includes the case the case n = 0. This should already have
+-- been done in the previous level. The mismatch between this level
+-- and the previous level is bad.
+have better_one_on_diag_ebasis {n : ℕ} {f : Mat[n, n][ℝ] →ₗ[ℝ] ℝ} (h₁ : ∀ A B, f (A * B) = f (B * A)) (h₂ : f 1 = n) : ∀ i, f (E i i) = 1
+· by_cases h : n > 0
+  . apply one_on_diag_ebasis h h₁ h₂
+  · have hn : n = 0
+    · omega
+    rw [hn]
+-- We cannot finish the proof because it seems to be impossible
+-- to tell Lean to rewrite n = 0 in ∀ i ∈ Fin n.   >:-(
+-- The official source code circumvents this problem by doing
+-- induction over n. But it’s not an induction proof!   >:-(
+
+
+
+funext A
+rw [eq_sum_apply_diag_ebasis h₁]
+
+unfold trace
+unfold Matrix.diag
+rw [sum_congr rfl]
+simp
+intro i
+suffices h : f (E i i) = 1
+· rw [h]
+  simp
+· apply better_one_on_diag_ebasis h₁ h₂
