@@ -1,0 +1,26 @@
+constructor
+· intro ⟨hinj, hsurj⟩
+  choose g hg using hsurj
+  use g
+  constructor
+  · unfold LeftInverse
+    intro a
+    apply hinj
+    apply hg
+  · apply hg
+· intro hg
+  obtain ⟨g, ⟨hl, hr⟩⟩ := hg
+  unfold Bijective
+  constructor
+  · unfold Injective
+    intro a₁ a₂ hf
+    apply congr_arg g at hf
+    unfold LeftInverse at hl
+    rw [hl, hl] at hf
+    assumption
+  · unfold Surjective
+    intro b
+    use (g b)
+    unfold RightInverse at hr
+    unfold LeftInverse at hr
+    apply hr
