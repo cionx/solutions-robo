@@ -1,0 +1,2 @@
+unfold Function.RightInverse
+rfl
