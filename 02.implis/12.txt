@@ -1,5 +1,5 @@
 by_cases h : A
-right
-assumption
-left
-assumption
+· right
+  assumption
+· left
+  assumption

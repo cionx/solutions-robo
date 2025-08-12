@@ -5,6 +5,6 @@ induction n with d hd
   use g a
   -- rw [← comp_apply] doesn’t work, so we need more steps
   apply congr_fun at hs
-  have hs2 := hs a
-  rw [comp_apply, comp_apply] at hs2
-  rw [hs2, ha]
+  specialize hs a
+  rw [comp_apply, comp_apply] at hs
+  rw [hs, ha]

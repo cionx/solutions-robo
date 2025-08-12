@@ -1,19 +1,17 @@
 induction n with d hd
--- base case
-simp
--- induction step
-simp
-rw [← insert_Icc_eq_Icc_add_one_right]
-rw [sum_insert]
-suffices h (n : ℤ) : -1 + n = n - 1
-rw [h]
-rw [← insert_Icc_eq_Icc_sub_one_left]
-rw [sum_insert]
-rw [hd]
-ring
-simp
-simp
-linarith
-ring
-simp
-linarith
+· simp
+· simp
+  rw [← insert_Icc_eq_Icc_add_one_right]
+  · rw [sum_insert]
+    · suffices h (n : ℤ) : -1 + n = n - 1
+      · rw [h]
+        rw [← insert_Icc_eq_Icc_sub_one_left]
+        · rw [sum_insert]
+          · rw [hd]
+            ring
+          · simp
+        · simp
+          linarith
+      · ring
+    · simp
+  · linarith

@@ -1,4 +1,4 @@
 intro hA
 constructor
-assumption
-assumption
+· assumption
+· assumption

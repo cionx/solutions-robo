@@ -18,8 +18,8 @@ have h₅ : ↑1 = f (E j j)
       assumption
     · simp at h
       omega
-  rw [h₂]
-  simp
+  · rw [h₂]
+    simp
 
 symm
 assumption

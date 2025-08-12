@@ -1,6 +1,10 @@
--- x lies in [l, n] but not in [m, n], therefore l < m and x lies in [l,m).
--- [l  x  [m     n]]
---
--- Alternatively: both m and x may lie in [l, m], but we don’t have m ≤ x, so x < m.
+/-
+Idea.
+x lies in [l, n] but not in [m, n], therefore l < m and x lies in [l,m).
+
+  [l  x  [m     n]]
+
+Alternatively: both m and x may lie in [l, m], but we don’t have m ≤ x, so x < m.
+-/
 
 omega

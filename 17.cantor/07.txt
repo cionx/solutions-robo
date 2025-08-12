@@ -5,8 +5,8 @@ constructor
   rw [← hx]
   simp
   trans (f ∘ f) x
-  apply comp_apply
-  rw [h]
+  · apply comp_apply
+  · rw [h]
 · simp
   intro ha
   use a

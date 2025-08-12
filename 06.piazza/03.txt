@@ -1,24 +1,22 @@
 ext x
 constructor
-
-intro ⟨hA, hBC⟩
-obtain hB | hC := hBC
-left
-constructor
-assumption
-assumption
-right
-constructor
-assumption
-assumption
-
-intro hx
-obtain ⟨hA, hB⟩ | ⟨hA, hC⟩ := hx
-constructor
-assumption
-left
-assumption
-constructor
-assumption
-right
-assumption
+· intro ⟨hA, hBC⟩
+  obtain hB | hC := hBC
+  · left
+    constructor
+    · assumption
+    · assumption
+  · right
+    constructor
+    · assumption
+    · assumption
+· intro hx
+  obtain ⟨hA, hB⟩ | ⟨hA, hC⟩ := hx
+  · constructor
+    · assumption
+    · left
+      assumption
+  · constructor
+    · assumption
+    · right
+      assumption

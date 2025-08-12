@@ -1,7 +1,7 @@
 trans D
-trans A
-symm
-assumption
-assumption
-symm
-assumption
+· trans A
+  · symm
+    assumption
+  · assumption
+· symm
+  assumption

@@ -1,2 +1,1 @@
-rw [not_not]
-rw [not_not]
+rw [not_not, not_not]

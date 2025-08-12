@@ -9,7 +9,7 @@ constructor
     apply hg
   · apply hg
 · intro hg
-  obtain ⟨g, ⟨hl, hr⟩⟩ := hg
+  obtain ⟨g, hl, hr⟩ := hg
   unfold Bijective
   constructor
   · unfold Injective

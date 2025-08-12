@@ -15,4 +15,3 @@ constructor
   rw [← ha₂] at h₂
   simp
   use a
-

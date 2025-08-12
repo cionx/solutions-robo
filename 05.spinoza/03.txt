@@ -1,4 +1,3 @@
 intro x
 apply g at x
-apply b at x
-assumption
+contradiction

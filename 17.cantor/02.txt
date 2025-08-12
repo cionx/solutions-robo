@@ -2,7 +2,6 @@
 have prev (f : A → Set A) : ¬ ∃ (a : A), f a = { x | x ∉ f x }
 · by_contra h
   obtain ⟨a, ha⟩ := h
-
   have h : a ∈ f a ↔ a ∉ f a
   · constructor
     · intro h
@@ -13,7 +12,6 @@ have prev (f : A → Set A) : ¬ ∃ (a : A), f a = { x | x ∉ f x }
       rw [ha] at h
       simp at h
       assumption
-
   tauto
 -- Copy end.
 

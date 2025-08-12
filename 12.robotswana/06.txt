@@ -2,7 +2,7 @@ have h₂ {n : ℕ} (i j : Fin n) : E i j • E j i = E i i := E.mul_same i j i
 
 intro i j
 trans f (E i j • E j i)
-rw [← h₂]
-trans f (E j i • E i j)
-apply h₁
-rw [h₂]
+· rw [← h₂]
+· trans f (E j i • E i j)
+  · apply h₁
+  · rw [h₂]

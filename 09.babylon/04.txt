@@ -1,7 +1,7 @@
 symm
 apply sum_subset
-rw [subset_iff]
-simp
+· rw [subset_iff]
+  simp
 intro x hx1
 intro hx2
 simp at hx1
@@ -10,12 +10,12 @@ rw [← not_imp_not] at hx2
 simp at hx2
 apply hx2 at hx1
 have h : x = 0 ∨ x = 1 ∨ x = 2
-omega
+· omega
 -- There should be a better way to do this.
 obtain h | h | h := h
-rw [h]
-simp
-rw [h]
-simp
-rw [h]
-simp
+· rw [h]
+  simp
+· rw [h]
+  simp
+· rw [h]
+  simp

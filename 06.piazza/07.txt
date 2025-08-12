@@ -1,10 +1,9 @@
 constructor
-intro hAB
-rw [hAB]
-tauto
-
-intro ⟨hAB, hBA⟩
-ext
-revert hBA
-revert hAB
-tauto
+· intro hAB
+  rw [hAB]
+  tauto
+· intro ⟨hAB, hBA⟩
+  ext
+  revert hBA
+  revert hAB
+  tauto

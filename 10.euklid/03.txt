@@ -1,12 +1,12 @@
--- div_mul and div_mul_left are already used by the background library
-have div_mul_lef {a b : ℕ}  : a ∣ a * b
+--div_mul_left is already used by the background library
+have div_mul_left2 {a b : ℕ}  : a ∣ a * b
 · use b
 
 have div_prod {a : ℕ} {A : Finset ℕ} (h : a ∈ A) : a ∣ ∏ a ∈ A, a
 · rw [← insert_erase h]
   rw [prod_insert]
-  apply div_mul_lef
-  simp
+  · apply div_mul_left2
+  · simp
 
 let all_primes := hf.toFinset
 use ∏ p ∈ all_primes, p
