@@ -5,13 +5,13 @@ unfold Matrix.diag
 rw [sum_congr rfl]
 simp
 intro i
-· suffices h : f (E i i) = 1
-  · rw [h]
-    simp
-  · by_cases h₃ : n = 0
-    · have h₄ : i < n
-      · simp
-      linarith
-    · have h₄ : n > 0
-      · omega
-      apply one_on_diag_ebasis h₄ h₁ h₂
+suffices h : f (E i i) = 1
+· rw [h]
+  simp
+· by_cases h₃ : n = 0
+  · have h₄ : i < n
+    · simp
+    linarith
+  · have h₄ : n > 0
+    · omega
+    apply one_on_diag_ebasis h₄ h₁ h₂
