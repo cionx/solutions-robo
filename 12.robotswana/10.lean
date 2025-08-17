@@ -1,7 +1,6 @@
 funext A
 rw [eq_sum_apply_diag_ebasis h₁]
-unfold trace
-unfold Matrix.diag
+unfold trace Matrix.diag
 rw [sum_congr rfl]
 simp
 intro i

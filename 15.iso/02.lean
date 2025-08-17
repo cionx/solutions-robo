@@ -21,6 +21,5 @@ constructor
   · unfold Surjective
     intro b
     use (g b)
-    unfold RightInverse at hr
-    unfold LeftInverse at hr
+    unfold RightInverse LeftInverse at hr
     apply hr
