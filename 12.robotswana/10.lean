@@ -9,9 +9,7 @@ suffices h : f (E i i) = 1
 · rw [h]
   simp
 · by_cases h₃ : n = 0
-  · have h₄ : i < n
-    · simp
+  · have h₄ : i < n := by simp
     linarith
-  · have h₄ : n > 0
-    · omega
+  · have h₄ : n > 0 := by omega
     apply one_on_diag_ebasis h₄ h₁ h₂

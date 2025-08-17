@@ -1,6 +1,5 @@
 -- div_mul_left is already in use by the background library.
-have div_mul_left2 {a b : ℕ} : a ∣ a * b
-· use b
+have div_mul_left2 {a b : ℕ} : a ∣ a * b := by use b
 
 have div_prod {a : ℕ} {A : Finset ℕ} (h : a ∈ A) : a ∣ ∏ a ∈ A, a
 · rw [← insert_erase h]
@@ -10,10 +9,8 @@ have div_prod {a : ℕ} {A : Finset ℕ} (h : a ∈ A) : a ∣ ∏ a ∈ A, a
 
 have div_not_div_add_one {a b : ℕ} (h1 : a ≥ 2) (h2 : a ∣ b ) : ¬ a ∣ (b + 1)
 · obtain ⟨r, h2⟩ := h2
-  have h3 : a * r < b + 1
-  · linarith
-  have h4 : b + 1 < a * (r + 1)
-  · linarith
+  have h3 : a * r < b + 1 := by linarith
+  have h4 : b + 1 < a * (r + 1) := by linarith
   apply not_dvd_of_between_consec_multiples h3 h4
 
 intro h1
@@ -25,16 +22,11 @@ have h2 : prod > 0
   simp [all_primes] at hp
   rw [prime_def] at hp
   omega
-have h3 : prod ≠ 0
-· omega
-have h4 : prod + 1 ≠ 1
-· simp
-  assumption
+have h3 : prod ≠ 0 := by omega
+have h4 : prod + 1 ≠ 1 := by simp; assumption
 obtain ⟨q, h5, h6⟩ := exists_prime_and_dvd h4
 have h7 : q ∣ prod
-· have h : q ∈ all_primes
-  · simp [all_primes]
-    assumption
+· have h : q ∈ all_primes := by simp [all_primes]; assumption
   simp [prod]
   apply div_prod h
 rw [prime_def] at h5

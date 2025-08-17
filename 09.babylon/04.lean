@@ -6,10 +6,8 @@ apply sum_subset
   intro hx2
   simp at hx1
   simp at hx2
-  have hx3 : x < 3
-  · omega
-  have h : x = 0 ∨ x = 1 ∨ x = 2
-  · omega
+  have hx3 : x < 3 := by omega
+  have h : x = 0 ∨ x = 1 ∨ x = 2 := by omega
   -- There should be a better way to do the following.
   obtain h | h | h := h
   · rw [h]

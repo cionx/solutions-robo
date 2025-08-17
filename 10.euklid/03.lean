@@ -1,6 +1,5 @@
 --div_mul_left is already used by the background library
-have div_mul_left2 {a b : ℕ}  : a ∣ a * b
-· use b
+have div_mul_left2 {a b : ℕ}  : a ∣ a * b := by use b
 
 have div_prod {a : ℕ} {A : Finset ℕ} (h : a ∈ A) : a ∣ ∏ a ∈ A, a
 · rw [← insert_erase h]
