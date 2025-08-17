@@ -1,2 +1,1 @@
-symm
-assumption
+apply h.symm

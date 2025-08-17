@@ -5,5 +5,4 @@ trans f (E i j * E j j)
   · apply h₁
   · rw [E.mul_of_ne]
     simp
-    symm
-    assumption
+    apply hij.symm

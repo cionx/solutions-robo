@@ -1,7 +1,5 @@
 trans D
 · trans A
-  · symm
-    assumption
+  · apply h₂.symm
   · assumption
-· symm
-  assumption
+· apply h₁.symm

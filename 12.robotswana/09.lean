@@ -14,12 +14,10 @@ have h₅ : ↑1 = f (E j j)
   suffices h : ↑n * f (E j j) = ↑ n * 1
   · rw [mul_eq_mul_left_iff] at h
     obtain h | h := h
-    · symm
-      assumption
+    · apply h.symm
     · simp at h
       omega
   · rw [h₂]
     simp
 
-symm
-assumption
+apply h₅.symm
