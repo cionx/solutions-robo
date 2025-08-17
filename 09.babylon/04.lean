@@ -10,9 +10,6 @@ apply sum_subset
   have h : x = 0 ∨ x = 1 ∨ x = 2 := by omega
   -- There should be a better way to do the following.
   obtain h | h | h := h
-  · rw [h]
-    simp
-  · rw [h]
-    simp
-  · rw [h]
-    simp
+  · rw [h]; simp
+  · rw [h]; simp
+  · rw [h]; simp
