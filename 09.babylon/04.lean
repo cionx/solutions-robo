@@ -6,12 +6,11 @@ intro x hx1
 intro hx2
 simp at hx1
 simp at hx2
-rw [← not_imp_not] at hx2
-simp at hx2
-apply hx2 at hx1
+have hx3 : x < 3
+· omega
 have h : x = 0 ∨ x = 1 ∨ x = 2
 · omega
--- There should be a better way to do this.
+-- There should be a better way to do the following.
 obtain h | h | h := h
 · rw [h]
   simp
